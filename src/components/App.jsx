@@ -1,11 +1,13 @@
 import React from "react";
-import "../styles/global.scss";
+import "../styles/global.css";
+import Layout from "../containers/Layout";
+import Login from "../containers/Login";
 
 const App = () => {
   return (
-    <div>
-      <h1>Hello FUCKING World !!!</h1>
-    </div>
+    <Layout>
+      <Login />
+    </Layout>
   );
 };
 
