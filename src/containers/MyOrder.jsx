@@ -1,4 +1,4 @@
-import React, { useContext } from "react"; //tarbjar el 404 not found, poner en el nimero de items en el carrito 9+, mostar mi orden solo si hay mas d eun item,
+import React, { useContext } from "react"; //tarbjar el 404 not found
 import AppContext from "../context/AppContext"; //cuando se agreag mas de un mismo item, borrar todos al darle X
 import OrderItem from "@components/OrderItem";
 import "@styles/MyOrder.scss";
@@ -24,7 +24,6 @@ const MyOrder = () => {
         {state.cart.map((product) => (
           <OrderItem product={product} key={`orderItem-${product.id}`} />
         ))}
-
         <div className="order">
           <p>
             <span>Total</span>
