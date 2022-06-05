@@ -16,6 +16,14 @@ const Header = () => {
     setToggle(!toggle);
   };
 
+  const checkNumItemsInCart = () => {
+    let itemsInCart = "9+";
+    if (state.cart.length > 0 && state.cart.length <= 9) {
+      itemsInCart = state.cart.length.toString();
+    }
+    return itemsInCart;
+  };
+
   return (
     <nav>
       <img src={menu} alt="menu" className="menu" />
@@ -53,7 +61,7 @@ const Header = () => {
               alt="shopping cart"
               onClick={() => setToggleOrder(!toggleOrder)}
             />
-            {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
+            {state.cart.length > 0 ? <div>{checkNumItemsInCart()}</div> : null}
           </li>
         </ul>
       </div>
