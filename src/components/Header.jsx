@@ -66,7 +66,7 @@ const Header = () => {
         </ul>
       </div>
       {toggle && <Menu />}
-      {toggleOrder && <MyOrder />}
+      {toggleOrder && state.cart.length > 0 && <MyOrder />}
     </nav>
   );
 };
