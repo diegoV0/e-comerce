@@ -3,7 +3,8 @@ import AppContext from "../context/AppContext";
 import "@styles/OrderItem.scss";
 import close from "@icons/icon_close.png";
 
-const OrderItem = ({ product }) => {
+const OrderItem = ({ product, indexValue }) => {
+  //const { product, indexValue } = props;
   const { removeFromCart } = useContext(AppContext);
 
   return (
@@ -13,7 +14,7 @@ const OrderItem = ({ product }) => {
       </figure>
       <p>{product.title}</p>
       <p>${product.price}</p>
-      <img src={close} alt="close" onClick={() => removeFromCart(product)} />
+      <img src={close} alt="close" onClick={() => removeFromCart(indexValue)} />
     </div>
   );
 };
