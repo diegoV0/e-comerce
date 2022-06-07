@@ -1,0 +1,25 @@
+@import 'vars';
+
+.NotFound {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.NotFoundImage{
+    top:100px;
+    height: 60%;
+    width: 60%;
+    object-fit: contain;
+}
+ .NotFoundText{
+   color: var(--hospital-green);
+    font-size: 30px;
+    font-weight: bold;
+ }
+
+ .LinkToHome{
+     position: absolute;
+     bottom: 50px;
+ }
